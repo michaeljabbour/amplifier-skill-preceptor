@@ -17,7 +17,7 @@ Portable method: [skills/preceptor/SKILL.md](skills/preceptor/SKILL.md). Install
 *So nobody knows which instructions in your system prompt are still doing anything.*
 *Preceptor is the instrument that measures it.*
 
-`amplifier-core` + `amplifier-foundation` only · no sibling bundles · 71 tests
+`amplifier-core` + `amplifier-foundation` only · no sibling bundles · 121 tests
 
 </div>
 
