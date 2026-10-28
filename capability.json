@@ -25,8 +25,8 @@
   ],
   "examples": [
     {
-      "title": "Fictional worked example",
-      "brief": "A fictional task illustrating Preceptor.",
+      "title": "Assess a source-reference cue",
+      "brief": "Use Preceptor to assess a proposed cue for a fictional agent that repeatedly omits a requested source reference. Define the opportunity and violation, a cue/no-cue probe and a task-quality check. Keep it a candidate until the native evidence gate is satisfied.",
       "before": "A one-off correction becomes a permanent prompt rule with no control group.",
       "after": "A small cue remains proposed until paired probes support a useful effect.",
       "why": "No-effect and inconclusive records can prevent unsupported prompt growth.",
@@ -81,5 +81,58 @@
   "docs": [
     "docs/CONSOLIDATION.md"
   ],
-  "publication_status": "Installation and evidence scopes are documented below."
+  "publication_status": "Installation and evidence scopes are documented below.",
+  "marketing": {
+    "headline": "Keep agent guidance that earns its place.",
+    "lead": "For people maintaining an agent’s recurring instructions. Preceptor turns repeated corrections into small testable cues, compares cue and no-cue behavior, and keeps inconclusive evidence from becoming permanent guidance.",
+    "benefits": [
+      {
+        "title": "Focus on a recurring mistake",
+        "body": "Start with observed opportunities and violations instead of turning one failure into a universal rule."
+      },
+      {
+        "title": "Test the cue’s contribution",
+        "body": "Compare behavior with and without the cue, retaining no-effect and harmful outcomes."
+      },
+      {
+        "title": "Keep the lifecycle inspectable",
+        "body": "Use the native ledger and read-only gate preview to see why a cue remains a candidate, is promoted or can be retired."
+      }
+    ],
+    "walkthrough": [
+      {
+        "title": "Observe with consent",
+        "detail": "Collect the structural evidence needed for a specific behavior; optional telemetry never records message or file text."
+      },
+      {
+        "title": "Compare the alternatives",
+        "detail": "Name a small cue and run matched probes with and without it, measuring task quality as well as compliance."
+      },
+      {
+        "title": "Maintain through the ledger",
+        "detail": "Use the tool API for lifecycle writes. Preserve human-origin and pinned cue protections and leave inconclusive candidates undecided."
+      }
+    ],
+    "use_when": [
+      "The same correction recurs and you want to test a targeted instruction.",
+      "An agent’s guidance has grown and individual cues need an evidence review.",
+      "You need a trace of why a behavioral cue changed status."
+    ],
+    "not_for": [
+      "Automatically recording people because the skill is installed.",
+      "Claiming a cue helps because the agent repeated its wording."
+    ],
+    "quickstart_prompt": "Use Preceptor to assess a proposed cue for a fictional agent that repeatedly omits a requested source reference. Define the opportunity and violation, a cue/no-cue probe and a task-quality check. Keep it a candidate until the native evidence gate is satisfied.",
+    "output_preview": "Candidate cue: include the source reference when the task requires one\nBehavior: reference omission on an eligible answer\nProbe arms: cue / no cue\nQuality check: answer remains correct and supported\n\nGate preview: inconclusive until sufficient comparative evidence exists\nAction: retain candidate status; do not promote from one correction",
+    "example_note": "Fictional cue proposal. There are no measured runs or promotion results in this example.",
+    "install_notes": [
+      "Python 3.11 or later is required by the portable install/build helper. The installed method runs through your agent host.",
+      "The portable method is independent of an observation service.",
+      "For native ledger inspection install modules/tool-preceptor and use project-preceptor --help.",
+      "Live observation or cue injection requires the optional host composition and its consent controls."
+    ],
+    "proof_summary": "Native ledger and lifecycle tests check gate behavior and protections. Minimum run counts alone do not establish statistical power or behavioral benefit.",
+    "next_step": "Choose one recurring correction and define a comparison before adding another permanent instruction."
+  },
+  "repository_url": "https://github.com/michaeljabbour/amplifier-skill-preceptor"
 }

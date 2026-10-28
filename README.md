@@ -1,10 +1,53 @@
 # Preceptor
 
-Turn observed recurring agent mistakes into small cues only when evidence supports their use.
+Keep agent guidance that earns its place.
 
-## Consolidated capability
+For people maintaining an agent’s recurring instructions. Preceptor turns repeated corrections into small testable cues, compares cue and no-cue behavior, and keeps inconclusive evidence from becoming permanent guidance.
 
-Portable method: [skills/preceptor/SKILL.md](skills/preceptor/SKILL.md). Install with `python3 scripts/capability.py install --dest ~/.agents/skills`. See [consolidation and runtime boundaries](docs/CONSOLIDATION.md). The retained source guide below documents the optional original host integration and historical evidence; it is not a new outcome claim.
+[Explore the site](https://michaeljabbour.github.io/amplifier-skill-preceptor/)
+
+## What you get
+
+- **Focus on a recurring mistake.** Start with observed opportunities and violations instead of turning one failure into a universal rule.
+- **Test the cue’s contribution.** Compare behavior with and without the cue, retaining no-effect and harmful outcomes.
+- **Keep the lifecycle inspectable.** Use the native ledger and read-only gate preview to see why a cue remains a candidate, is promoted or can be retired.
+
+## Start here
+
+```sh
+git clone https://github.com/michaeljabbour/amplifier-skill-preceptor.git
+cd amplifier-skill-preceptor
+python3 scripts/capability.py install --dest ~/.agents/skills
+```
+
+This installs the portable method and its packaged references into your agent skill folder. If your host uses another folder, pass that path to `--dest`. Start a new session or use your host’s skill refresh so it can discover the installed skill. Optional native tools are installed separately.
+
+Try this first task:
+
+> Use Preceptor to assess a proposed cue for a fictional agent that repeatedly omits a requested source reference. Define the opportunity and violation, a cue/no-cue probe and a task-quality check. Keep it a candidate until the native evidence gate is satisfied.
+
+## What you need
+
+- Python 3.11 or later for the portable install helper.
+- The portable method is independent of an observation service.
+- For native ledger inspection install modules/tool-preceptor and use project-preceptor --help.
+- Live observation or cue injection requires the optional host composition and its consent controls.
+
+For the optional native interface, use a project virtual environment:
+
+```sh
+python3 -m venv .venv
+source .venv/bin/activate
+python3 -m pip install ./modules/tool-preceptor
+```
+
+## Evidence and limits
+
+Native ledger and lifecycle tests check gate behavior and protections. Minimum run counts alone do not establish statistical power or behavioral benefit.
+
+The worked examples on the site are fictional. They illustrate the output and decisions; they are not user results or measured benefit. See [consolidation and runtime boundaries](docs/CONSOLIDATION.md) for retained interfaces and acceptance scope.
+
+---
 
 ## Retained source guide
 
@@ -119,7 +162,7 @@ Start by watching. That is not ceremony — it is the thesis applied to the bund
 rollout.
 
 ```bash
-amplifier run --bundle 'git+https://github.com/michaeljabbour/amplifier-bundle-preceptor@main#subdirectory=bundles/observe-only.yaml'
+amplifier run --bundle 'git+https://github.com/michaeljabbour/amplifier-skill-preceptor@main#subdirectory=bundles/observe-only.yaml'
 ```
 
 That bundle **records nothing.** The observer ships `enabled: false`, so the command above
@@ -127,7 +170,7 @@ verifies the bundle loads and does no more. Recording starts only when you choos
 whose name says so:
 
 ```bash
-amplifier run --bundle 'git+https://github.com/michaeljabbour/amplifier-bundle-preceptor@main#subdirectory=bundles/observe-on.yaml'
+amplifier run --bundle 'git+https://github.com/michaeljabbour/amplifier-skill-preceptor@main#subdirectory=bundles/observe-on.yaml'
 ```
 
 Picking that bundle *is* the consent act. There is deliberately no settings-file stanza —
@@ -137,7 +180,7 @@ no way to tell which), and a consent control that fails silently is worse than n
 Run it for a couple of weeks. Read what it saw. *Then* decide whether the rest is warranted:
 
 ```bash
-amplifier run --bundle git+https://github.com/michaeljabbour/amplifier-bundle-preceptor@main
+amplifier run --bundle git+https://github.com/michaeljabbour/amplifier-skill-preceptor@main
 ```
 
 ## What you actually see
