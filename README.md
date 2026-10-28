@@ -1,4 +1,14 @@
-<div align="center">
+# Preceptor
+
+Turn observed recurring agent mistakes into small cues only when evidence supports their use.
+
+## Consolidated capability
+
+Portable method: [skills/preceptor/SKILL.md](skills/preceptor/SKILL.md). Install with `python3 scripts/capability.py install --dest ~/.agents/skills`. See [consolidation and runtime boundaries](docs/CONSOLIDATION.md). The retained source guide below documents the optional original host integration and historical evidence; it is not a new outcome claim.
+
+## Retained source guide
+
+### <div align="center">
 
 # Preceptor
 

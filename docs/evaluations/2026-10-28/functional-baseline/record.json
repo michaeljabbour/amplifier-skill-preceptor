@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-28",
+  "status": "local-functional-baseline",
+  "source_commit": "a32309a90ea792955e315c80b047dc65d03fc4b8",
+  "python": "3.12.5",
+  "fixture_content": "fictional",
+  "model_calls": 0,
+  "notes": "58 native ledger/tool tests passed plus 3 standalone functional checks.",
+  "limitations": [
+    "A minimum sample count and passing gate are not independent proof of efficacy or generalization."
+  ],
+  "files": {
+    "native.log": "b0234d8f09e706345682036fd8fad99dee3c7779d2898cad280ba59c6d3c2c08",
+    "functional.log": "69ae3ae72da6a447a41f0593b771e21240e77d0e48424f346e3c67805b672567"
+  }
+}

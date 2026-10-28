@@ -1,0 +1,8 @@
+test_cue_injection_is_rejected_and_status_is_read_only (__main__.Gate.test_cue_injection_is_rejected_and_status_is_read_only) ... ok
+test_gate_preserves_inconclusive_and_opposite_evidence (__main__.Gate.test_gate_preserves_inconclusive_and_opposite_evidence) ... ok
+test_standalone_cli_works_without_host (__main__.Gate.test_standalone_cli_works_without_host) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.136s
+
+OK

@@ -5,6 +5,9 @@ description = "The preceptor ledger — evidence-gated cue lifecycle with an aut
 requires-python = ">=3.11"
 dependencies = ["pyyaml>=6.0"]
 
+[project.scripts]
+project-preceptor = "amplifier_module_tool_preceptor.cli:main"
+
 [project.entry-points."amplifier.modules"]
 tool-preceptor = "amplifier_module_tool_preceptor:mount"
 

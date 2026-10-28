@@ -12,7 +12,12 @@ import logging
 from pathlib import Path
 from typing import Any
 
-from amplifier_core import ToolResult
+try:
+    from amplifier_core import ToolResult
+except ModuleNotFoundError as exc:
+    if exc.name != "amplifier_core":
+        raise
+    ToolResult = None  # Standalone ledger/CLI does not require the optional host.
 
 from . import gates, ledger
 
@@ -438,6 +443,8 @@ class PreceptorTool:
         }
 
     async def execute(self, input: dict[str, Any]) -> ToolResult:
+        if ToolResult is None:
+            raise RuntimeError("The Amplifier tool adapter requires amplifier-core; use project-preceptor for standalone ledger access.")
         try:
             operation = input.get("operation")
             if not isinstance(operation, str) or not operation:
@@ -498,6 +505,8 @@ class PreceptorTool:
             )
 
     async def _dispatch(self, operation: str, data: dict[str, Any]) -> ToolResult:
+        if ToolResult is None:
+            raise RuntimeError("The Amplifier tool adapter requires amplifier-core; use project-preceptor for standalone ledger access.")
         root = self._root
         wd = self._working_dir
 

@@ -55,3 +55,7 @@ htmlcov/
 # ── Node (only if a doc toolchain ever lands here) ────────────────────────────
 node_modules/
 bench-results/
+
+_site/
+
+*.pyc

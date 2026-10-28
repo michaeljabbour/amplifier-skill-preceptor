@@ -1,0 +1,84 @@
+{
+  "id": "preceptor",
+  "display_name": "Preceptor",
+  "kind": "skill",
+  "promise": "Turn observed recurring agent mistakes into small cues only when evidence supports their use.",
+  "audience": "People evaluating and improving recurring agent behavior.",
+  "trigger": "Investigate a repeated correction or evaluate a proposed behavioral cue.",
+  "skill_path": "skills/preceptor",
+  "modes": [
+    {
+      "name": "Observe",
+      "when": "A recurring failure is suspected.",
+      "output": "Consented structural observations and a falsifiable cue hypothesis."
+    },
+    {
+      "name": "Assess",
+      "when": "A candidate cue has probe cases.",
+      "output": "A paired evidence record including no-effect and uncertainty."
+    },
+    {
+      "name": "Maintain",
+      "when": "A cue is active, stale or harmful.",
+      "output": "An evidence-gated lifecycle decision and traceable ledger state."
+    }
+  ],
+  "examples": [
+    {
+      "title": "Fictional worked example",
+      "brief": "A fictional task illustrating Preceptor.",
+      "before": "A one-off correction becomes a permanent prompt rule with no control group.",
+      "after": "A small cue remains proposed until paired probes support a useful effect.",
+      "why": "No-effect and inconclusive records can prevent unsupported prompt growth.",
+      "fictional": true
+    }
+  ],
+  "boundaries": [
+    "A minimum sample count and passing gate are not independent proof of efficacy or generalization."
+  ],
+  "install_commands": [
+    "python3 scripts/capability.py install --dest ~/.agents/skills"
+  ],
+  "runtime_install_commands": [
+    "python3 -m pip install ./modules/tool-preceptor"
+  ],
+  "verification": [
+    {
+      "name": "Functional acceptance",
+      "command": "python3 scripts/functional_gate.py",
+      "expected": "Supplied fictional tasks exercise actual mechanisms and failure boundaries.",
+      "status": "passed",
+      "evidence": "58 native ledger/tool tests passed plus 3 standalone functional checks."
+    },
+    {
+      "name": "Native host acceptance",
+      "command": "See retained source integration guide",
+      "expected": "Actual provider/host/desktop/daemon/runner acceptance for the selected adapter.",
+      "status": "not-run",
+      "evidence": "No live model, real desktop transaction, invitation, deployment or production data migration was performed by this functional baseline."
+    }
+  ],
+  "sources": [
+    {
+      "repo": "amplifier-bundle-preceptor",
+      "commit": "a32309a90ea792955e315c80b047dc65d03fc4b8",
+      "paths": [
+        "context/methodology/cue-lifecycle.md",
+        "context/methodology/evidence-standards.md",
+        "context/methodology/ledger-format.md",
+        "docs/CONSENT.md",
+        "agents",
+        "modules",
+        "context"
+      ],
+      "license": "MIT",
+      "role": "Primary retained owner history, mechanisms and records; portable method consolidates the listed entry points."
+    }
+  ],
+  "consolidation": [
+    "One portable method entry with mode references; original native engines, agents and records retained as optional adapters."
+  ],
+  "docs": [
+    "docs/CONSOLIDATION.md"
+  ]
+}
