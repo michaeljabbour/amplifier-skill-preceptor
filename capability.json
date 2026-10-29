@@ -134,5 +134,12 @@
     "proof_summary": "Native ledger and lifecycle tests check gate behavior and protections. Minimum run counts alone do not establish statistical power or behavioral benefit.",
     "next_step": "Choose one recurring correction and define a comparison before adding another permanent instruction."
   },
-  "repository_url": "https://github.com/michaeljabbour/amplifier-skill-preceptor"
+  "repository_url": "https://github.com/michaeljabbour/amplifier-skill-preceptor",
+  "film": {
+    "file": "preceptor-film",
+    "seconds": 70,
+    "heading": "One more rock.",
+    "blurb": "In 70 seconds, Bramble the pack mule carries every rule anyone ever added, until nobody knows which ones still do anything. Preceptor starts from the mistake that actually happened, writes one small cue, keeps it out of the pack and races two Brambles on the same tasks. Too close to call means the cue stays a candidate. Taking a rule out needs proof too. Captions are on the player; a transcript is below.",
+    "note": "The agent, the tasks and the race result are a fictional example. Five runs each is a minimum, not proof; the film shows how the skill behaves and reports no results."
+  }
 }

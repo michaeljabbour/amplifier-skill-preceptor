@@ -2,6 +2,8 @@
 
 Keep agent guidance that earns its place.
 
+Watch the [70-second film](https://michaeljabbour.github.io/amplifier-skill-preceptor/#film): an agent weighed down by rules nobody checks, and how the skill tests one small cue before it joins the pack. The example in it is fictional.
+
 For people maintaining an agent’s recurring instructions. Preceptor turns repeated corrections into small testable cues, compares cue and no-cue behavior, and keeps inconclusive evidence from becoming permanent guidance.
 
 [Explore the site](https://michaeljabbour.github.io/amplifier-skill-preceptor/)
