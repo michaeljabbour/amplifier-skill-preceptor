@@ -84,14 +84,14 @@
   "publication_status": "Installation and evidence scopes are documented below.",
   "marketing": {
     "headline": "Keep agent guidance that earns its place.",
-    "lead": "For people maintaining an agent’s recurring instructions. Preceptor turns repeated corrections into small testable cues, compares cue and no-cue behavior, and keeps inconclusive evidence from becoming permanent guidance.",
+    "lead": "For people maintaining an agent\u2019s recurring instructions. Preceptor turns repeated corrections into small testable cues, compares cue and no-cue behavior, and keeps inconclusive evidence from becoming permanent guidance.",
     "benefits": [
       {
         "title": "Focus on a recurring mistake",
         "body": "Start with observed opportunities and violations instead of turning one failure into a universal rule."
       },
       {
-        "title": "Test the cue’s contribution",
+        "title": "Test the cue\u2019s contribution",
         "body": "Compare behavior with and without the cue, retaining no-effect and harmful outcomes."
       },
       {
@@ -115,7 +115,7 @@
     ],
     "use_when": [
       "The same correction recurs and you want to test a targeted instruction.",
-      "An agent’s guidance has grown and individual cues need an evidence review.",
+      "An agent\u2019s guidance has grown and individual cues need an evidence review.",
       "You need a trace of why a behavioral cue changed status."
     ],
     "not_for": [
@@ -134,12 +134,89 @@
     "proof_summary": "Native ledger and lifecycle tests check gate behavior and protections. Minimum run counts alone do not establish statistical power or behavioral benefit.",
     "next_step": "Choose one recurring correction and define a comparison before adding another permanent instruction."
   },
-  "repository_url": "https://github.com/michaeljabbour/amplifier-skill-preceptor",
+  "repository_url": "https://github.com/michaeljabbour/amplifier-capability-preceptor",
+  "name": "amplifier-capability-preceptor",
+  "legacy_names": [
+    "amplifier-skill-preceptor",
+    "preceptor"
+  ],
+  "contract_version": "amplifier-capability/v1",
+  "version": null,
+  "version_basis": "No release version recorded; installer requires a full Git revision pin.",
+  "engine": "LLM",
+  "engine_components": {
+    "caller_method": "LLM"
+  },
+  "surfaces": [
+    "agent-skills",
+    "amplifier-bundle"
+  ],
+  "portable_method": {
+    "name": "preceptor",
+    "path": "skills/preceptor",
+    "include": [
+      "."
+    ],
+    "contract": "Agent Skills directory; caller applies the method; no independent execution loop is installed."
+  },
+  "interfaces": {
+    "portable": {
+      "input": "Caller task and explicitly authorized context",
+      "output": "Turn observed recurring agent mistakes into small cues only when evidence supports their use.",
+      "failure": "Report insufficient evidence, unsupported context or host limitation; never turn discovery into an execution claim."
+    },
+    "native": {
+      "distribution": null,
+      "entrypoints": {},
+      "docs": [
+        "docs/CONSOLIDATION.md"
+      ],
+      "status": "Existing declared entrypoints preserved; runtime signatures, service access and installation tests remain separate evidence."
+    },
+    "host_adapters": {
+      "amplifier_bundle": "bundle.md",
+      "grants_autonomy": false
+    }
+  },
+  "permissions": {
+    "installation": {
+      "network": false,
+      "executes_capability_code": false,
+      "writes": [
+        "Selected discovery folders",
+        ".capability-state transaction backups"
+      ],
+      "grants_runtime_permissions": false
+    },
+    "runtime": {
+      "status": "Host/caller authorizes each operation; installation is not a tool allowlist or standing approval.",
+      "declared_boundaries": [
+        "A minimum sample count and passing gate are not independent proof of efficacy or generalization."
+      ]
+    },
+    "secret_names": {
+      "discovery_requires": [],
+      "native_runtime_inventory": "See native documentation; no credentials are bundled or inferred."
+    }
+  },
+  "dataflow": {
+    "installation": "Read pinned tracked portable source and copy locally with SHA-256 receipts. No source text is transmitted.",
+    "method": "Caller supplies authorized context; existing promise and boundaries govern output.",
+    "native_runtime": "Provider/network/storage flows are owned by native interfaces and host authorization; these files do not enable them."
+  },
+  "source_policy": {
+    "revision": "Explicit full40-character Git commit required at installation; never infer latest.",
+    "repository_rename": "Public identity may change; skill folder, imports, entrypoints, tool IDs and schemas remain stable.",
+    "research": ".research/market remains local and ignored; AGENTS governs refresh."
+  },
   "film": {
     "file": "preceptor-film",
     "seconds": 70,
     "heading": "One more rock.",
     "blurb": "In 70 seconds, Bramble the pack mule carries every rule anyone ever added, until nobody knows which ones still do anything. Preceptor starts from the mistake that actually happened, writes one small cue, keeps it out of the pack and races two Brambles on the same tasks. Too close to call means the cue stays a candidate. Taking a rule out needs proof too. Captions are on the player; a transcript is below.",
     "note": "The agent, the tasks and the race result are a fictional example. Five runs each is a minimum, not proof; the film shows how the skill behaves and reports no results."
-  }
+  },
+  "repository_aliases": [
+    "https://github.com/michaeljabbour/amplifier-skill-preceptor"
+  ]
 }
